@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobiuz/main_screen/main_screen.dart';
+import 'package:mobiuz/tab_bar.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   _navigate(BuildContext context){
     Future.delayed(const Duration(seconds: 3),(){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-        return MainScreen();
+        return TabBox();
       }));
     });
   }

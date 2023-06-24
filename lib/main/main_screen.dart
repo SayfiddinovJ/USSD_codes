@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobiuz/main_screen/widgets/button_bar.dart';
-import 'package:mobiuz/main_screen/widgets/containers.dart';
+import 'package:mobiuz/main/widgets/containers.dart';
+
+import '../ussd/ussd_screen.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -13,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white70,
+      backgroundColor: Colors.grey,
       drawer: const Drawer(backgroundColor: Colors.red,),
       appBar: AppBar(
         title: const Text('mobiuz'),
@@ -24,17 +26,21 @@ class _MainScreenState extends State<MainScreen> {
       ),
       body: Column(
         children: [
-          SizedBox(height: 25.h,),
           Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.w),
                 child: GridView.count(
+                  padding: EdgeInsets.symmetric(vertical: 10.h),
                   physics: const BouncingScrollPhysics(),
                   crossAxisCount: 2,
                   crossAxisSpacing: 10.w,
                   mainAxisSpacing: 10.h,
                   children: [
-                    Containers(name: 'USSD', icon: Icons.numbers,onTap: (){},),
+                    Containers(name: 'USSD', icon: Icons.numbers,onTap: (){
+                      setState(() {
+                        _navigate(context);
+                      });
+                    },),
                     Containers(name: 'USSD', icon: Icons.numbers,onTap: (){},),
                     Containers(name: 'USSD', icon: Icons.numbers,onTap: (){},),
                     Containers(name: 'USSD', icon: Icons.numbers,onTap: (){},),
@@ -46,9 +52,13 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
           ),
-          const MyButtonBar(),
         ],
       ),
     );
+  }
+  _navigate(BuildContext context){
+    Navigator.push(context, MaterialPageRoute(builder: (context){
+      return const USSDScreen();
+    }));
   }
 }

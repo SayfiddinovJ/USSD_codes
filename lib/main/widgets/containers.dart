@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: must_be_immutable
 class Containers extends StatefulWidget {
   Containers({
     super.key,
@@ -16,12 +17,19 @@ class Containers extends StatefulWidget {
 class _ContainersState extends State<Containers> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(25),
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(25),
+      ),
+      child: TextButton(
+        onPressed: widget.onTap,
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            ),
+          ),
         ),
         child: Column(
           children: [
