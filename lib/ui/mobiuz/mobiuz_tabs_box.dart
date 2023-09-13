@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobiuz/cubit/mobiuz/mobiuz_tab_cubit.dart';
-import 'package:mobiuz/data/mobiuz/m_definitions_data.dart';
+import 'package:ussd_data/data/mobiuz/m_definitions_data.dart';
 import 'package:mobiuz/ui/mobiuz/m_definition/m_definition_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_internet_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_min_sms/m_min_sms_screen.dart';

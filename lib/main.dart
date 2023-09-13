@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobiuz/cubit/mobiuz/mobiuz_tab_cubit.dart';
 import 'package:mobiuz/cubit/ucell/ucell_tab_cubit.dart';
-import 'package:mobiuz/ui/splash/splash_screen.dart';
+import 'package:mobiuz/ui/select/select_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const SplashScreen(),
+      child: const SelectScreen(),
     );
   }
 }

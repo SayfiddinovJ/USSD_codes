@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobiuz/data/mobiuz/m_internet_data.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/drive_screen.dart';
+import 'package:mobiuz/ui/mobiuz/m_internet/m_daily_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_monthly_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_night_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/onNet_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/widgets/global_button.dart';
+import 'package:ussd_data/data/mobiuz/m_internet_data.dart';
 
 class MInternetScreen extends StatelessWidget {
   const MInternetScreen({super.key});
@@ -76,7 +77,15 @@ class MInternetScreen extends StatelessWidget {
             GlobalButton(
               text: 'Kunlik internet to\'plamlar',
               color: Colors.red,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MDailyMBScreen(
+                        collections: MDailyMBCollection.getDailyCollection()),
+                  ),
+                );
+              },
             ),
           ],
         ),

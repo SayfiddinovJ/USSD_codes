@@ -7,13 +7,17 @@ class SelectButton extends StatelessWidget {
     super.key,
     required this.image,
     required this.text,
+    required this.subTitle,
     required this.color,
     required this.onTap,
   });
+
   final String image;
   final String text;
+  final String subTitle;
   final Color color;
   final VoidCallback onTap;
+
   @override
   Widget build(BuildContext context) {
     return ZoomTapAnimation(
@@ -51,6 +55,10 @@ class SelectButton extends StatelessWidget {
                 fontSize: 30.sp,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            Text(
+              subTitle,
+              style: TextStyle(color: color),
             ),
           ],
         ),

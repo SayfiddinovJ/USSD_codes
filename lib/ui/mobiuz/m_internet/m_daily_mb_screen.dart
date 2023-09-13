@@ -3,21 +3,23 @@ import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ussd_data/data/model/internet_model.dart';
 
-class NightMBScreen extends StatelessWidget {
-  const NightMBScreen({super.key, required this.nights});
-  final List<MNightCollectionModel> nights;
+class MDailyMBScreen extends StatelessWidget {
+  const MDailyMBScreen({super.key, required this.collections});
+
+  final List<MDailyMBModel> collections;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Mobiuz"),
+        title: const Text('Mobiuz'),
         backgroundColor: Colors.red,
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
         children: [
-          ...List.generate(nights.length, (index) {
-            MNightCollectionModel night = nights[index];
+          ...List.generate(collections.length, (index) {
+            MDailyMBModel collection = collections[index];
             return Container(
               padding: EdgeInsets.all(15.h),
               margin: EdgeInsets.symmetric(vertical: 10.h),
@@ -44,7 +46,7 @@ class NightMBScreen extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      'Tungi to\'plam ${night.mb}',
+                      'Internet ${collection.mb} MB',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20.sp,
@@ -53,7 +55,7 @@ class NightMBScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10.h),
                   Text(
-                    '${night.mb} MB',
+                    '${collection.mb} MB',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17.sp,
@@ -61,7 +63,7 @@ class NightMBScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10.h),
                   Text(
-                    '${night.cost} so\'m',
+                    '${collection.cost} so\'m',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17.sp,
@@ -75,7 +77,7 @@ class NightMBScreen extends StatelessWidget {
                         backgroundColor: Colors.red,
                       ),
                       onPressed: () async {
-                        await FlutterPhoneDirectCaller.callNumber(night.code);
+                        await FlutterPhoneDirectCaller.callNumber(collection.code);
                       },
                       child: const Text("Faollashtirish"),
                     ),

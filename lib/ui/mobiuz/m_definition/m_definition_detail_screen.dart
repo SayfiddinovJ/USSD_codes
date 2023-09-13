@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobiuz/data/model/definition_model.dart';
+import 'package:ussd_data/data/model/definition_model.dart';
 
 class MDefinitionDetailScreen extends StatelessWidget {
   const MDefinitionDetailScreen({super.key, required this.definition});

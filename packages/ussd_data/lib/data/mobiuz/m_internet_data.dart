@@ -1,4 +1,4 @@
-import 'package:mobiuz/data/model/internet_model.dart';
+import 'package:ussd_data/data/model/internet_model.dart';
 
 class MMonthMBData {
   static List<MonthlyMBModel> getMBCollections() {
@@ -100,6 +100,30 @@ class MNightCollectionsData {
         MNightCollectionModel(mb: '2 000', cost: '9 500', code: '*200*1000#'));
     collections.add(
         MNightCollectionModel(mb: '1 000', cost: '5 000', code: '*200*1000#'));
+    return collections;
+  }
+}
+
+class MDailyMBCollection {
+  static List<MDailyMBModel> getDailyCollection() {
+    List<MDailyMBModel> collections = [];
+
+    collections.add(
+        MDailyMBModel(mb: '10 000', cost: '25 000', code: '*102*1*10000#'));
+    collections
+        .add(MDailyMBModel(mb: '5 000', cost: '16 500', code: '*102*1*5000#'));
+    collections
+        .add(MDailyMBModel(mb: '3 000', cost: '12 000', code: '*102*1*3000#'));
+    collections
+        .add(MDailyMBModel(mb: '2 000', cost: '9 000', code: '*102*1*2000#'));
+    collections
+        .add(MDailyMBModel(mb: '1 000', cost: '5 000', code: '*102*1*1000#'));
+    collections
+        .add(MDailyMBModel(mb: '500', cost: '4 000', code: '*102*1*500#'));
+    collections
+        .add(MDailyMBModel(mb: '300', cost: '3 000', code: '*102*1*300#'));
+    collections
+        .add(MDailyMBModel(mb: '200', cost: '2 000', code: '*102*1*200#'));
     return collections;
   }
 }

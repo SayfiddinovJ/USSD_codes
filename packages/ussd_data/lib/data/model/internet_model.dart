@@ -46,7 +46,20 @@ class MNightCollectionModel {
   final String mb;
   final String cost;
   final String code;
+
   MNightCollectionModel({
+    required this.mb,
+    required this.cost,
+    required this.code,
+  });
+}
+
+class MDailyMBModel {
+  final String mb;
+  final String cost;
+  final String code;
+
+  MDailyMBModel({
     required this.mb,
     required this.cost,
     required this.code,

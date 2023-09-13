@@ -28,7 +28,7 @@ class SelectScreen extends StatelessWidget {
                     builder: (context) => const MobiuzTabsBox(),
                   ),
                 );
-              },
+              }, subTitle: '',
             ),
             SizedBox(height: 20.h),
             SelectButton(
@@ -42,7 +42,7 @@ class SelectScreen extends StatelessWidget {
                     builder: (context) => const UcellTabsBox(),
                   ),
                 );
-              },
+              }, subTitle: '',
             ),
             const Spacer(),
             const Text('SJJB production',style: TextStyle(color: Colors.grey),),

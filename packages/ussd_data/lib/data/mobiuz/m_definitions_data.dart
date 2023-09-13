@@ -1,4 +1,4 @@
-import 'package:mobiuz/data/model/definition_model.dart';
+import 'package:ussd_data/data/model/definition_model.dart';
 
 class MobiUzDefinition {
   static List<DefinitionModel> getDefinition() {
