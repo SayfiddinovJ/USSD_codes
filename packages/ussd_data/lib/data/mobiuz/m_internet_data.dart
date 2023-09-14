@@ -1,4 +1,4 @@
-import 'package:ussd_data/data/model/internet_model.dart';
+import 'package:ussd_data/data/m_model/internet_model.dart';
 
 class MMonthMBData {
   static List<MonthlyMBModel> getMBCollections() {

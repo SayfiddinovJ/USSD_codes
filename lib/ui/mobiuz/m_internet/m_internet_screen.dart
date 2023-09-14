@@ -4,7 +4,7 @@ import 'package:mobiuz/ui/mobiuz/m_internet/drive_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_daily_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_monthly_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_night_mb_screen.dart';
-import 'package:mobiuz/ui/mobiuz/m_internet/onNet_screen.dart';
+import 'package:mobiuz/ui/mobiuz/m_internet/on_net_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/widgets/global_button.dart';
 import 'package:ussd_data/data/mobiuz/m_internet_data.dart';
 

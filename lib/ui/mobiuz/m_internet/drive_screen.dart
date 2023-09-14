@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ussd_data/data/model/internet_model.dart';
+import 'package:ussd_data/data/m_model/internet_model.dart';
 
 class DriveScreen extends StatelessWidget {
   const DriveScreen({super.key, required this.drives});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ussd_data/data/model/definition_model.dart';
+import 'package:ussd_data/data/m_model/definition_model.dart';
 import 'package:mobiuz/ui/mobiuz/m_definition/m_definition_detail_screen.dart';
 
 class MDefinitionScreen extends StatelessWidget {

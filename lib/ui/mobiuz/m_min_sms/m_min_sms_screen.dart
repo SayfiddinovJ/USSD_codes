@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/widgets/global_button.dart';
 import 'package:mobiuz/ui/mobiuz/m_min_sms/m_minute_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_min_sms/m_sms_screen.dart';
+import 'package:ussd_data/data/mobiuz/m_min_sms_data.dart';
 
 class MMinSMSScreen extends StatelessWidget {
   const MMinSMSScreen({super.key});
@@ -23,18 +24,26 @@ class MMinSMSScreen extends StatelessWidget {
                 color: Colors.red,
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MMinuteScreen()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MMinuteScreen(
+                        minutes: MMinData.getMinute(),
+                      ),
+                    ),
+                  );
                 }),
             GlobalButton(
                 text: "SMS to'plamlari",
                 color: Colors.red,
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MSMSScreen()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MSMSScreen(
+                        sms: MSMSData.getSMS(),
+                      ),
+                    ),
+                  );
                 }),
           ],
         ),
