@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobiuz/cubit/ucell/ucell_tab_cubit.dart';
 import 'package:mobiuz/ui/ucell/u_definition/u_definition_screen.dart';
 import 'package:mobiuz/ui/ucell/u_internet/u_internet_screen.dart';
-import 'package:mobiuz/ui/ucell/u_min_sms/u_min_sms_screen.dart';
+import 'package:mobiuz/ui/ucell/u_sms/u_sms_screen.dart';
 import 'package:mobiuz/ui/ucell/u_operator/u_operator_screen.dart';
+import 'package:ussd_data/data/ucell/u_definition_data.dart';
+import 'package:ussd_data/data/ucell/u_sms_data.dart';
 
 class UcellTabsBox extends StatefulWidget {
   const UcellTabsBox({super.key});
@@ -19,9 +21,9 @@ class _UcellTabsBoxState extends State<UcellTabsBox> {
   @override
   void initState() {
     screens = [
-      const UDefinitionScreen(),
+      UDefinitionScreen(definitions: UDefinitionData.getDefinitions()),
       const UInternetScreen(),
-      const UMinSMSScreen(),
+       USMSScreen(sms: USMSData.getSMS(),),
       const UOperatorScreen(),
     ];
     super.initState();
@@ -44,8 +46,7 @@ class _UcellTabsBoxState extends State<UcellTabsBox> {
               icon: Icon(Icons.call_to_action_outlined), label: "Ta'riflar"),
           BottomNavigationBarItem(
               icon: Icon(Icons.language), label: "Internet"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.access_time), label: "Daq/SMS"),
+          BottomNavigationBarItem(icon: Icon(Icons.mail), label: "SMS"),
           BottomNavigationBarItem(icon: Icon(Icons.call), label: "Operator"),
         ],
         currentIndex: context.watch<UcellTabCubit>().state,

@@ -70,6 +70,8 @@ class MDailyMBScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.h),
+                  const Text('Amal qilish muddati 1 kun'),
+                  SizedBox(height: 10.h),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: ElevatedButton(
@@ -77,7 +79,8 @@ class MDailyMBScreen extends StatelessWidget {
                         backgroundColor: Colors.red,
                       ),
                       onPressed: () async {
-                        await FlutterPhoneDirectCaller.callNumber(collection.code);
+                        await FlutterPhoneDirectCaller.callNumber(
+                            collection.code);
                       },
                       child: const Text("Faollashtirish"),
                     ),

@@ -5,7 +5,8 @@ import 'package:mobiuz/ui/mobiuz/m_internet/m_daily_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_monthly_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/m_night_mb_screen.dart';
 import 'package:mobiuz/ui/mobiuz/m_internet/on_net_screen.dart';
-import 'package:mobiuz/ui/mobiuz/m_internet/widgets/global_button.dart';
+import 'package:mobiuz/ui/ucell/ucell_tabs_box.dart';
+import 'package:mobiuz/ui/widgets/global_button.dart';
 import 'package:ussd_data/data/mobiuz/m_internet_data.dart';
 
 class MInternetScreen extends StatelessWidget {
@@ -17,6 +18,17 @@ class MInternetScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Mobiuz"),
         backgroundColor: Colors.red,
+         actions: [
+          IconButton(
+            onPressed: () {
+               Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const UcellTabsBox()),
+              );
+            },
+            icon: const Icon(Icons.wifi_protected_setup_sharp),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),

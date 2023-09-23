@@ -42,8 +42,6 @@ class SelectButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               child: Image.asset(
                 image,
-                // height: 50,
-                // width: 50,
                 fit: BoxFit.fill,
               ),
             ),

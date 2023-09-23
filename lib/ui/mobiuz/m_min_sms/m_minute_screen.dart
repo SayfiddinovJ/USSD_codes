@@ -10,10 +10,11 @@ class MMinuteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Daqiqalar'),
+        title: const Text('Daqiqa to\'plamlari'),
         backgroundColor: Colors.red,
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 10.h),
         child: Column(children: [
           ...List.generate(minutes.length, (index) {
             MMinModel minute = minutes[index];
@@ -42,12 +43,14 @@ class MMinuteScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10.h),
                   Text(
-                    '${minute.cost} so\'m',
+                    minute.cost,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17.sp,
                     ),
                   ),
+                  SizedBox(height: 10.h),
+                  const Text('Amal qilish muddati 30 kun'),
                   SizedBox(height: 10.h),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
@@ -56,8 +59,7 @@ class MMinuteScreen extends StatelessWidget {
                         backgroundColor: Colors.red,
                       ),
                       onPressed: () async {
-                        await FlutterPhoneDirectCaller.callNumber(
-                            minute.code);
+                        await FlutterPhoneDirectCaller.callNumber(minute.code);
                       },
                       child: const Text("Faollashtirish"),
                     ),

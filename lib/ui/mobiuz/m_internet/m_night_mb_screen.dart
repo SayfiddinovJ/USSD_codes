@@ -68,6 +68,10 @@ class NightMBScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.h),
+                  const Text('Amal qilish muddati 30 kun'),
+                  SizedBox(height: 5.h),
+                  const Text('Foydalanish davri 00:00dan 8:00gacha'),
+                  SizedBox(height: 10.h),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: ElevatedButton(

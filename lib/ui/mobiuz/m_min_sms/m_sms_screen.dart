@@ -10,10 +10,11 @@ class MSMSScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SMS'),
+        title: const Text('SMS to\'plamlari'),
         backgroundColor: Colors.red,
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 10.h),
         child: Column(children: [
           ...List.generate(sms.length, (index) {
             MSMSModel sm = sms[index];
@@ -43,7 +44,7 @@ class MSMSScreen extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      'Internet ${sm.name} MB',
+                      '${sm.name} to\'plami',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20.sp,
@@ -52,7 +53,7 @@ class MSMSScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10.h),
                   Text(
-                    sm.count,
+                    '${sm.count} sms',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17.sp,
@@ -60,12 +61,14 @@ class MSMSScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10.h),
                   Text(
-                    '${sm.cost} so\'m',
+                    sm.cost,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17.sp,
                     ),
                   ),
+                  SizedBox(height: 10.h),
+                  sm.validity == null ? const SizedBox() : Text(sm.validity!),
                   SizedBox(height: 10.h),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,

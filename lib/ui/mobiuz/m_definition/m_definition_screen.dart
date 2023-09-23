@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobiuz/ui/ucell/ucell_tabs_box.dart';
 import 'package:ussd_data/data/m_model/definition_model.dart';
 import 'package:mobiuz/ui/mobiuz/m_definition/m_definition_detail_screen.dart';
 
@@ -12,6 +13,17 @@ class MDefinitionScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Mobiuz"),
         backgroundColor: Colors.red,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const UcellTabsBox()),
+              );
+            },
+            icon: const Icon(Icons.wifi_protected_setup_sharp),
+          ),
+        ],
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),

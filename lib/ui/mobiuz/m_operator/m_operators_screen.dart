@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobiuz/ui/ucell/ucell_tabs_box.dart';
 
 class MOperatorScreen extends StatelessWidget {
   const MOperatorScreen({super.key});
@@ -11,6 +12,17 @@ class MOperatorScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Mobiuz"),
         backgroundColor: Colors.red,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const UcellTabsBox()),
+              );
+            },
+            icon: const Icon(Icons.wifi_protected_setup_sharp),
+          ),
+        ],
       ),
       body: Column(children: [
         SizedBox(height: 10.h),

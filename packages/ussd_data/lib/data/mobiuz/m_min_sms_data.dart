@@ -42,12 +42,14 @@ class MSMSData {
         name: '«SMS 100»',
         count: '100',
         code: '*104*100#',
-        cost: '4 500 so\'m'));
+        cost: '4 500 so\'m',
+        validity: 'Amal qilish muddati 30 kun'));
     sms.add(MSMSModel(
         name: '«SMS 300»',
         count: '300',
         code: '*104*300#',
-        cost: '10 500 so\'m'));
+        cost: '10 500 so\'m',
+        validity: 'Amal qilish muddati 30 kun'));
     sms.add(MSMSModel(
         name: '«SMS-OnNet»',
         count: '50',

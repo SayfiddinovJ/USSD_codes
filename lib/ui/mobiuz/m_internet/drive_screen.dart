@@ -35,7 +35,7 @@ class DriveScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   DecoratedBox(
-                     decoration: const BoxDecoration(
+                    decoration: const BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
                           color: Colors.red,
@@ -68,6 +68,8 @@ class DriveScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.h),
+                   Text(drive.mbAddition),
+                  SizedBox(height: 10.h),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: TextButton(
@@ -76,9 +78,9 @@ class DriveScreen extends StatelessWidget {
                         await FlutterPhoneDirectCaller.callNumber(
                             drive.checkCode);
                       },
-                      child:  Text(
+                      child: Text(
                         "Tekshirish",
-                        style: TextStyle(color: Colors.black,fontSize: 15.sp),
+                        style: TextStyle(color: Colors.black, fontSize: 15.sp),
                       ),
                     ),
                   ),

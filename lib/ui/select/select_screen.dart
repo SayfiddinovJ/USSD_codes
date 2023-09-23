@@ -22,13 +22,14 @@ class SelectScreen extends StatelessWidget {
               text: 'Mobiuz',
               color: Colors.red,
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const MobiuzTabsBox(),
                   ),
                 );
-              }, subTitle: '',
+              },
+              subTitle: 'Mobiuz - Raqamli imkoniyatlar sari!',
             ),
             SizedBox(height: 20.h),
             SelectButton(
@@ -36,16 +37,20 @@ class SelectScreen extends StatelessWidget {
               text: 'Ucell',
               color: Colors.deepPurple,
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const UcellTabsBox(),
                   ),
                 );
-              }, subTitle: '',
+              },
+              subTitle: 'Hayotni yaxshilik sari o\'zgartirib!',
             ),
             const Spacer(),
-            const Text('SJJB production',style: TextStyle(color: Colors.grey),),
+            const Text(
+              'SJJB production',
+              style: TextStyle(color: Colors.grey),
+            ),
             SizedBox(height: 10.h),
           ],
         ),
