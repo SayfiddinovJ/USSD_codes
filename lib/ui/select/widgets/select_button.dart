@@ -46,14 +46,19 @@ class SelectButton extends StatelessWidget {
               ),
             ),
             SizedBox(width: 5.w),
-            Text(
-              text,
-              style: TextStyle(
-                color: color,
-                fontSize: 30.sp,
-                fontWeight: FontWeight.bold,
-              ),
+            Column(
+              children: [
+                Text(
+                  text,
+                  style: TextStyle(
+                    color: color,
+                    fontSize: 30.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
+            SizedBox(width: 15.w),
             Text(
               subTitle,
               style: TextStyle(color: color),
